@@ -1,5 +1,5 @@
+var myVar = setInterval(function(){percent_siving()},1);
 function percent_siving(){
-
         var now = new Date();
 
         var start = new Date(14, 2, 15);
@@ -11,4 +11,5 @@ function percent_siving(){
         var percent = newnow/total;
         var progress = percent.toString().concat("%");
         document.getElementById("progress123").style.width=progress;
+        document.getElementById("test").innerHTML=progress;
       }
