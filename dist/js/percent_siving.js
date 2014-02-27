@@ -8,7 +8,7 @@ function percent_siving(){
         var newnow = now-start;
         var total = end-start;
 
-        var percent = newnow/total;
+        var percent = (newnow/total).toFixed(10);
         var progress = percent.toString().concat("%");
         document.getElementById("progress123").style.width=progress;
         document.getElementById("test").innerHTML=progress;
