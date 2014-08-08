@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../ikoner/KomStek-icon.png">
+
+    <% yield :meta %>
+
+
+    <%= favicon_link_tag 'favicon.ico' %>
+
+    <title><% yield :title %>KomStek</title>
+    <!-- 
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>    
+    <script src="../../dist/js/bootstrap.js"></script>
+	
+
+     Bootstrap core CSS 
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    Bootstrap theme 
+    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../../dist/js/percent_siving.js"></script>
+
+    <! Custom styles for this template -->
+    <!-- <link href="theme.css" rel="stylesheet"> -->
+
+    -->
+    <% yield :head %>
+  </head>
+
+
+  <!-- Body -->
+  <body role="document" onload="percent_siving();">
+  	<header>
+		  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="../hovedsider/index.html">KomStek</a>
+		        </div>
+		        <div class="navbar-collapse collapse">
+		          <ul>
+		          <ul class="nav navbar-nav">
+		            <!-- Her må man endre hvilken del av siden man er på-->
+		            <!-- <li class="active">             -->
+		            <li class="active"><a href="index.html">Hjem</a></li>
+		            <li><a href="../hovedsider/about.html">Om KomStek</a></li>
+		            <li><a href="../hovedsider/contact.html">Kontakt</a></li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gobis interessegrupper <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="../interessegruppe/ost_og_vin.html">Ost og vin</a></li>
+		                <li><a href="../interessegruppe/is_og_bad.html">Is og bad</a></li>
+		              </ul>
+		            </li>
+		            <!--Making dropdownmenu for Komiteer-->
+		            <li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Komiteene <b class="caret"></b></a>
+		            	<ul class="dropdown-menu">
+		            		<li><a href="../komite/friKom.html">FriKom</a></li>
+		            		<li><a href="../komite/ropKom.html">RopKom</a></li>
+		            		<li><a href="../komite/dustKom.html">DustKom</a></li>
+		            		<li><a href="../komite/dipKom.html">DipKom</a></li>
+		            		<li><a href="../komite/varmKom.html">VarmKom</a></li>
+		            		<li><a href="../komite/turKom.html">TurKom</a></li>
+		            	</ul>
+		            </li>
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+    </header>
+    <% yield :main_header %>
+    <% yield %>
+
+  </body>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Komstek</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
